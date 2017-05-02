@@ -46,7 +46,7 @@ function initializeGame(word_list){
     initializeWord(selected_word);
     $("#start").hide();
     
-    var solved = Array(selected_word.length - 1).fill("_");
+    var solved = Array(selected_word.length).fill("_");
     var attempts = 6;
 
     console.log(solved);
