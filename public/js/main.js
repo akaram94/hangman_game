@@ -41,7 +41,7 @@ function initializeGame(word_list){
   var playingGame = true;
   if(playingGame){
     var selected_word = word_list[Math.floor(Math.random()*word_list.length)].toUpperCase();
-    console.log(selected_word);
+
     $('#game').show();
     initializeWord(selected_word);
     $("#start").hide();
@@ -49,7 +49,6 @@ function initializeGame(word_list){
     var solved = Array(selected_word.length).fill("_");
     var attempts = 6;
 
-    console.log(solved);
 
     $('.game-buttons').on('click', function(){
       if(playingGame){
