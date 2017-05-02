@@ -1,0 +1,47 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p{
+    margin:0;
+    padding:0;
+}
+
+.page-header{
+    margin: 0px;
+    padding: 30px;
+    background-color: #fafafa;
+}
+
+.game-buttons{
+    margin: 3px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;    
+}
+
+li{
+    display: inline;
+    margin-right: 10px;
+    font-size: 4em;
+}
+
+#attempts{
+    margin-top: 10px;
+}
+
+#start{
+    margin-top: 15px;
+}
+
+#button_holder{
+    margin-top: 10px;
+}
+
+#leaderboards{
+    margin-top: 25px;
+}
+
+#game{
+    display: none;
+}
