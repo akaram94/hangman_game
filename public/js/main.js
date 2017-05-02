@@ -49,6 +49,8 @@ function initializeGame(word_list){
     var solved = Array(selected_word.length - 1).fill("_");
     var attempts = 6;
 
+    console.log(solved);
+
     $('.game-buttons').on('click', function(){
       if(playingGame){
         var letter = $(this).attr("data-letter");
@@ -115,7 +117,7 @@ function initializeButtons(){
 function initializeWord(word){
   var length = word.length;
   $('#word_holder').append("<ul id='word'></ul>")
-  for(var i = 1; i < length; i++){
+  for(var i = 0; i < length; i++){
     $('#word').append("<li class='guess'>_</li>")
   }
 }
