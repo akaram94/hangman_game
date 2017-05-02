@@ -4,11 +4,12 @@ var MongoClient = require('mongodb').MongoClient;
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
+app.set( 'port', ( process.env.PORT || 5000 ));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use('/assets', express.static('public'));
 
 app.get('/', function(req, res){
@@ -62,5 +63,6 @@ app.post('/checkUser', function(req, res){
     });
 });
 
-app.listen(3000);
-console.log('Server initialized on port 3000 at 127.0.0.1');
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+});
